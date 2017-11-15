@@ -6,9 +6,9 @@ import { ActivityService } from '../../services/activity.service';
 })
 export class LineaComponent{
 
-  lineas:any[] = [];
+  lineas:Array<any> = [];
   data:any[] = [];
-  info:any {};
+  info:any = {};
 
 
   constructor(public _as:ActivityService){
@@ -21,9 +21,10 @@ export class LineaComponent{
               this.lineas.push(this.info[i].zoneId);
           }
         });
-    
+
   }
 
+  public lineChartColors:Array<any> = [];
 
   public lineChartData:Array<any> = [
     {data: [65, 59, 80, 81, 56, 55, 40]},
@@ -43,4 +44,12 @@ export class LineaComponent{
   public lineChartLegend:boolean = false;
   public lineChartType:string = 'line';
 
+  // events
+  public chartClicked(e:any):void {
+
+  }
+
+  public chartHovered(e:any):void {
+    
+  }
 }
