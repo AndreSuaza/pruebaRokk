@@ -1,0 +1,18 @@
+<div class="contenedor">
+  <div class="panel-1">
+    <canvas baseChart style="display: block;width: 600px;height: 170px;"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+  </div>
+  <div class="panel-2">
+    <ul>
+        <li *ngFor="let label of lineChartLabels">{{label}}</li>
+    </ul>
+  </div>
+</div>
